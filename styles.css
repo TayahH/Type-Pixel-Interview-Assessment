@@ -1,0 +1,419 @@
+/* ===GLOBAL=== */
+
+/* Font Faces */
+@font-face {
+    font-family: Mabry;
+    src: url(fonts/Mabry-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Mabry;
+    src: url(fonts/Mabry-Medium.ttf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: Hatton;
+    src: url(fonts/PPHatton-Semibold.ttf);
+    font-weight: bold;
+}
+
+html {
+    max-width: 1400px;
+}
+
+body {
+    padding: 80px 17px 80px 17px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    color: #1C4433;
+    font-family: 'Hatton';
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #698D80;
+    font-family: 'Mabry', normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===HEADER=== */
+
+.text-block-nav {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.header-paragraph {
+    font-size: 16px;
+}
+
+/* ===TESTIMONIAL CAROUSEL=== */
+
+/* Slider JS */
+.slide-container {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    overflow: hidden;
+}
+
+/* Buttons */
+.fa-chevron-left,
+.fa-chevron-right {
+    color: #1C4433;
+}
+
+[type=button] {
+    -webkit-appearance: none;
+}
+
+.nav-buttons {
+    margin-bottom: 30px;
+}
+
+.nav-button-prev {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #F0F4F2;
+    border-color: #1C4433;
+    color: #1C4433;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 5px;
+}
+
+.nav-button-next {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #F0F4F2;
+    border-color: #1C4433;
+    color: #1C4433;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.nav-button-next:disabled,
+.nav-button-prev:disabled {
+    opacity: 40%;
+}
+
+.nav-button-next:hover:not([disabled]),
+.nav-button-prev:hover:not([disabled]) {
+    background-color: #D2DDD9;
+    border-width: 2px;
+}
+
+.nav-button-next:active:not([disabled]),
+.nav-button-prev:active:not([disabled]) {
+    background-color: #1C4433;
+    color: #FFFFFF;
+}
+
+/* ===TESTIMONIAL CARD=== */
+.card {
+    width: 270px;
+    height: 330px;
+    --bs-card-border-color: none;
+}
+
+.testimonial-card {
+    min-width: 270px;
+    max-width: 270px;
+    height: 330px;
+    background-color: #698D80;
+    margin: auto;
+}
+
+.review {
+    width: 220px;
+    height: 208px;
+    text-align: center;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.card-title {
+    font-family: "Mabry", "medium";
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: left;
+    line-height: 28px;
+    margin-bottom: 20px;
+    min-height: 56px;
+
+    /* ELLIPSIS ON OVERFLOW */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* start showing ellipsis when 3rd line is reached */
+    white-space: pre-wrap;
+    /* let the text wrap preserving spaces */
+}
+
+.card-paragraph {
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 4px;
+    font-family: 'Mabry', normal;
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 100px;
+
+
+    /* ELLIPSIS ON OVERFLOW */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /* start showing ellipsis when 3rd line is reached */
+    white-space: pre-wrap;
+    /* let the text wrap preserving spaces */
+}
+
+.read-more {
+    font-size: 12px;
+    color: #D2DDD9;
+    font-family: 'Mabry', normal;
+    line-height: 18px;
+    text-decoration: none;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.read-more:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.reviewer {
+    width: 220px;
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+}
+
+hr {
+    color: #1C4433;
+}
+
+.credit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviewer-name {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: 'Mabry', medium;
+    line-height: 28px;
+    text-align: left;
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fa-star,
+.fa-star-o {
+    color: #EADED4;
+    padding: 0 1.5px;
+}
+
+
+/* ===MODAL CARD=== */
+
+.modal {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: fixed;
+
+    z-index: 1;
+    left: calc(50% - 160px);
+    top: calc(50% - 165px);
+
+    width: 320px;
+    height: 330px;
+    overflow: auto;
+
+    background-color: #698D80
+}
+
+.modal .review {
+    width: 260px;
+    height: auto;
+    padding-top: 30px;
+}
+
+.modal-title {
+    font-family: "Mabry", "medium";
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: left;
+    line-height: 28px;
+    margin-bottom: 20px;
+    width: 212px;
+}
+
+.modal-paragraph {
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 4px;
+    font-family: 'Mabry', normal;
+    font-size: 14px;
+    line-height: 20px;
+    height: auto;
+}
+
+.modal .reviewer {
+    width: 260px;
+    padding-top: 0px;
+}
+
+.modal-reviewer-name {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: 'Mabry', medium;
+    line-height: 28px;
+    text-align: left;
+    max-width: 110px;
+    overflow-wrap: break-word;
+}
+
+.close {
+    color: #FFFFFF;
+    float: right;
+    font-size: 28px;
+    font-weight: lighter;
+    transform: translateY(-12px);
+}
+
+.close:hover {
+    color: #D2DDD9;
+}
+
+
+/* ===TABLET RESPONSIVE SCREEN=== */
+
+@media only screen and (min-width: 525px) {
+    .slide-container {
+        width: 75%;
+        padding: 40px 0;
+    }
+
+    .text-block-nav {
+        width: 480px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Modal Card */
+    .modal-content {
+        width: 480px;
+        /* Full width */
+        height: 303px;
+        /* Full height */
+
+        left: calc(50% - 240px);
+        top: calc(50% - 151.5px);
+
+    }
+
+    .modal .review {
+        width: 420px;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .modal-title {
+        width: 372px;
+    }
+
+    .modal .reviewer {
+        width: 420px;
+        padding-top: 0px;
+    }
+
+    .modal-reviewer-name {
+        max-width: 300px;
+    }
+}
+
+/* ===DESKTOP RESPONSIVE SCREEN=== */
+@media only screen and (min-width: 770px) {
+    body {
+        padding: 80px 78px 80px 78px
+    }
+
+    /* Header */
+    .text-block-nav {
+        text-align: left;
+        margin: 0;
+        width: 540px;
+    }
+
+    /* Testimonial Carousel */
+    .slide-container {
+        width: 100%;
+        max-width: 1400px;
+        padding: 40px 0;
+    }
+
+    .nav-buttons {
+        margin-bottom: 40px;
+    }
+
+    /* Testimonial Card */
+    .testimonial-card {
+        max-width: 270px;
+        max-height: 330px;
+        background-color: #698D80;
+        margin: 0;
+    }
+
+    /* Modal Card */
+    .modal-content {
+        width: 600px;
+        /* Full width */
+
+        z-index: 1;
+        /* Sit on top */
+        left: calc(50% - 300px);
+    }
+
+    .modal .review {
+        width: 540px;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .modal-title {
+        width: 492px;
+    }
+
+    .modal .reviewer {
+        width: 540px;
+        padding-top: 0px;
+    }
+
+    .modal-reviewer-name {
+        max-width: 400px;
+    }
+
+}
